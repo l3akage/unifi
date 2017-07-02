@@ -14,5 +14,6 @@ require 'unifi/authorize_guest'
 require 'unifi/unauthorize_guest'
 require 'unifi/list_clients'
 require 'unifi/list_devices'
+require 'unifi/list_allusers'
 
 #

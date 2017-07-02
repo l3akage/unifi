@@ -41,6 +41,12 @@ module Unifi
       interactor = Unifi::ListClients.call(site: site, conn: conn)
       interactor.response.body["data"]
     end
+    
+    def allusers
+      interactor = Unifi::ListAllusers.call(site: site, conn: conn)
+      interactor.response.body["data"]
+    end
+
 
     def devices
       interactor = Unifi::ListDevices.call(site: site, conn: conn)
