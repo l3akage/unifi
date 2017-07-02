@@ -5,6 +5,6 @@ module Unifi
     expects :site    # Controller site id
     permits :within
 
-    provides(:url) { "/api/s/#{site}/stat/alluser?within=#{within}" }
+    provides(:url) { "/api/s/#{site}/stat/alluser#{within ? "?within=#{within}" : ''}" }
   end
 end
