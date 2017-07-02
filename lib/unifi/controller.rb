@@ -41,12 +41,16 @@ module Unifi
       interactor = Unifi::ListClients.call(site: site, conn: conn)
       interactor.response.body["data"]
     end
-    
+
     def allusers
       interactor = Unifi::ListAllusers.call(site: site, conn: conn)
       interactor.response.body["data"]
     end
 
+    def rogueaps(opts = {})
+      interactor = Unifi::ListRogueaps.call(opts.merge(site: site, conn: conn))
+      interactor.response.body["data"]
+    end
 
     def devices
       interactor = Unifi::ListDevices.call(site: site, conn: conn)
