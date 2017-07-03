@@ -42,6 +42,11 @@ module Unifi
       interactor.response.body["data"]
     end
 
+    def events
+      interactor = Unifi::ListEventsClients.call(site: site, conn: conn)
+      interactor.response.body["data"]
+    end
+
     def allusers(opts = {})
       interactor = Unifi::ListAllusers.call(opts.merge(site: site, conn: conn))
       interactor.response.body["data"]
