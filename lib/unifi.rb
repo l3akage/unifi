@@ -17,5 +17,6 @@ require 'unifi/list_devices'
 require 'unifi/list_allusers'
 require 'unifi/list_rogueaps'
 require 'unifi/list_events'
+require 'unifi/list_alarms'
 
 #
