@@ -43,7 +43,7 @@ module Unifi
     end
 
     def events
-      interactor = Unifi::ListEventsClients.call(site: site, conn: conn)
+      interactor = Unifi::ListEvents.call(site: site, conn: conn)
       interactor.response.body["data"]
     end
 
